@@ -1,0 +1,90 @@
+﻿<%--<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Coursework2.master.cs" Inherits="CW2_AD.Coursework2" %>--%>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Home</title>
+    <%--bootstrap css--%>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <%--custom css--%>
+    <link href="customcss/styleadmin.css" rel="stylesheet" />
+
+    <%--bootstrap js--%>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
+                <a class="navbar-brand" href="#"><span class="mb-0 h1">Ropey DVDs</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Home.aspx">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" PostBackUrl="~/Sign-up.aspx">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" PostBackUrl="~/Login.aspx">Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" PostBackUrl="#">Become a member?</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server">Logout</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="admin-features" class="container-fluid">
+                <div class="row d-flex justify-content-center text-center">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center px-4">
+                        <p>
+                            <asp:LinkButton class="adminlinks" ID="LinkButton6" runat="server">Admin Login</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:LinkButton class="adminlinks" ID="LinkButton11" runat="server">Actor Management</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:LinkButton class="adminlinks" ID="LinkButton12" runat="server">Studio Management</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:LinkButton class="adminlinks" ID="LinkButton8" runat="server" PostBackUrl="~/Browse_DVD.aspx">DVD Inventory</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:LinkButton class="adminlinks" ID="LinkButton9" runat="server" PostBackUrl="~/Issue_DVD.aspx">Issue DVD</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:LinkButton class="adminlinks" ID="LinkButton10" runat="server">Member Management</asp:LinkButton>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <footer id="Footer">
+        <div class="footer">
+            &copy; 2000 &bull; Ropey DVDs <br>
+            All Rights Reserved
+        </div>
+    </footer>   
+</body>
+</html>
